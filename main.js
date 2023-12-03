@@ -12,7 +12,6 @@ async function checkWeather(city) {
     document.querySelector(".weather").style.display="none";
   } else {
     var data = await response.json();
-    console.log(data, "data");
     document.querySelector(".city").innerHTML = data.name;
     document.querySelector(".temp").innerHTML =
       Math.round(data.main.temp) + "°C";
@@ -46,10 +45,7 @@ searchBtn.addEventListener("click", () => {
 });
 
 searchBox.addEventListener("keydown",(e)=>{
-    console.log(e.code);
     if(e.code === "Enter"){
-        console.log("ada");
         checkWeather(searchBox.value);
-
     }
 })
