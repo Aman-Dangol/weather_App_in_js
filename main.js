@@ -41,7 +41,6 @@ function getLocation() {
 function showPosition(position) {
   let lat = position.coords.latitude;
   let lon = position.coords.longitude;
-  // console.log(lat, lon);
   latLongApi(lat, lon);
 }
 
